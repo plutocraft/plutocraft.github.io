@@ -2,7 +2,7 @@
   <div class="flex center hero">
     <img class="wordmark" src="@/assets/logo.svg"/>
     <div class="flex product">
-      <div class="view"><img class="productimage" src="@/assets/pk87-small.jpg"/></div>
+      <div class="view"><img class="productimage" src="@/assets/pk87-small.png"/></div>
       <div class="title">pk87.0 interest check</div>
       <div class="viewbutton" @click="store('pk87.0')">see more</div>
     </div>
@@ -73,8 +73,13 @@ export default {
   transform: scale(1.05);
 }
 .view {
-  margin: 40px;
-  margin-bottom: 20px;
+  background: white;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
 }
 .title {
   font-family: Circular;
