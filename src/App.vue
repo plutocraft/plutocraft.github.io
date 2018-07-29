@@ -11,4 +11,25 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+  background: white;
+  box-sizing: border-box;
+}
+#app {
+  font-size: 12px;
+  text-rendering: geometricPrecision;
+}
+@font-face {
+  font-family: Circular;
+  src: url("assets/lineto-circular-black.woff");
+  font-weight: bolder;
+}
+.flex {
+  display: flex;
+}
+.flex.center {
+  justify-content: center;
+  align-items: center;
+}
 </style>
