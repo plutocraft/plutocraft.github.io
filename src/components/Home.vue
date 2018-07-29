@@ -4,26 +4,33 @@
     <div class="flex product">
       <div class="view"><img class="productimage" src="@/assets/pk87-small.jpg"/></div>
       <div class="title">pk87.0 interest check</div>
-      <div class="viewbutton">see more</div>
+      <div class="viewbutton" @click="store('pk87.0')">see more</div>
     </div>
   </div>
 </template>
 
 <script>
-import anime from 'animejs'
+import anime from "animejs";
 
 export default {
   name: "Home",
   mounted: function() {
     anime({
-      targets: '.wordmark path',
+      targets: ".wordmark path",
       loop: true,
       strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'easeInOutSine',
+      easing: "easeInOutSine",
       duration: 1500,
-      delay: function(el, i) { return i * 250 },
-      direction: 'alternate',
-    })
+      delay: function(el, i) {
+        return i * 250;
+      },
+      direction: "alternate"
+    });
+  },
+  methods: {
+    store: function(val) {
+      window.location.href = "https://plutocraft.store/" + val;
+    }
   }
 };
 </script>
@@ -60,7 +67,7 @@ export default {
 }
 .productimage {
   height: 100px;
-  animation: 20s shift infinite;
+  animation: 25s shift infinite;
 }
 .product:hover {
   transform: scale(1.05);
@@ -72,7 +79,7 @@ export default {
 .title {
   font-family: Circular;
   font-size: 2.25em;
-  animation: 20s shift infinite;
+  animation: 25s shift infinite;
   color: #e429fe;
 }
 .viewbutton {
@@ -83,7 +90,7 @@ export default {
   color: #e429fe;
   border: 2px solid #e429fe;
   border-radius: 5px;
-  animation: 20s shift infinite;
+  animation: 25s shift infinite;
   cursor: pointer;
   transition: all 0.2s ease;
 }
