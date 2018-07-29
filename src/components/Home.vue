@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     store: function(val) {
-      window.location.href = "https://plutocraft.store/" + val;
+      window.location.href = "https://plutocraft.store/#/" + val;
     }
   }
 };
